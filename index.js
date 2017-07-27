@@ -44,7 +44,7 @@ export default class ProgressiveImage extends Component {
         <Animated.Image
           resizeMode="cover"
           style={[styles.image, { opacity: this.state.imageOpacity }, this.props.style]}
-          source={this.props.imageSource}
+          source={this.props.source}
           onLoad={() => this.onLoadImage()}
         />
       </View>
@@ -65,7 +65,7 @@ export default class ProgressiveImage extends Component {
 ProgressiveImage.propTypes = {
   placeHolderColor: PropTypes.string,
   placeHolderSource: PropTypes.number,
-  imageSource: PropTypes.object.isRequired,
+  source: PropTypes.object.isRequired,
   imageFadeDuration: PropTypes.number.isRequired,
   onLoadThumbnail: PropTypes.func.isRequired,
   onLoadImage: PropTypes.func.isRequired,
